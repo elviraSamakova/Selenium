@@ -10,7 +10,8 @@ public class FileUploadDemo {
 	public static void main(String[] args) throws InterruptedException {
 
 		//Path of the file to upload
-		String filePath="/Users/syntax/Desktop/myFile.png";
+		String filePath="/Users/elvirasamakova/Desktop/myFile.png";
+		///Users/elvirasamakova/Desktop
 		
 		//open browser and navigate to the-internet.herokuapp.com
 		String url = "https://the-internet.herokuapp.com/";

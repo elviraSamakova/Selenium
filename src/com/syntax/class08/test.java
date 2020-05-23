@@ -12,7 +12,7 @@ public class test {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://166.62.36.207/syntaxpractice/table-search-filter-demo.html");
 		
-		driver.findElement(arg0)
+	//	driver.findElement(arg0)
 	}
 
 }

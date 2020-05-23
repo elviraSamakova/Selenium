@@ -1,6 +1,6 @@
-[1589920399.678][INFO]: Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 14076
-[1589920399.679][INFO]: Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1589920399.858][INFO]: [1a726673da2da7282ccb5c9d779a9d7b] COMMAND InitSession {
+[1589994526.553][INFO]: Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 48762
+[1589994526.553][INFO]: Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1589994526.739][INFO]: [138a9280269ed175c58d828c042ebabf] COMMAND InitSession {
    "capabilities": {
       "firstMatch": [ {
          "browserName": "chrome",
@@ -18,7 +18,7 @@
       }
    }
 }
-[1589920399.859][INFO]: Populating Preferences file: {
+[1589994526.740][INFO]: Populating Preferences file: {
    "alternate_error_pages": {
       "enabled": false
    },
@@ -71,7 +71,7 @@
       "enabled": false
    }
 }
-[1589920399.859][INFO]: Populating Local State file: {
+[1589994526.741][INFO]: Populating Local State file: {
    "background_mode": {
       "enabled": false
    },
@@ -81,87 +81,6 @@
       }
    }
 }
-[1589920399.860][INFO]: Launching chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --load-extension=/var/folders/7_/sgqr7vcn4619n1jb8b_3bmmc0000gn/T/.com.google.Chrome.P4HEns/internal --log-level=0 --no-first-run --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/var/folders/7_/sgqr7vcn4619n1jb8b_3bmmc0000gn/T/.com.google.Chrome.CEDkrM data:,
-[1589920400.841][INFO]: resolved localhost to ["127.0.0.1","::1"]
-[1589920400.872][INFO]: [1a726673da2da7282ccb5c9d779a9d7b] RESPONSE InitSession {
-   "capabilities": {
-      "acceptInsecureCerts": false,
-      "browserName": "chrome",
-      "browserVersion": "81.0.4044.138",
-      "chrome": {
-         "chromedriverVersion": "81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776})",
-         "userDataDir": "/var/folders/7_/sgqr7vcn4619n1jb8b_3bmmc0000gn/T/.com.google.Chrome.CEDkrM"
-      },
-      "goog:chromeOptions": {
-         "debuggerAddress": "localhost:55795"
-      },
-      "networkConnectionEnabled": false,
-      "pageLoadStrategy": "normal",
-      "platformName": "mac os x",
-      "proxy": {
-
-      },
-      "setWindowRect": true,
-      "strictFileInteractability": false,
-      "timeouts": {
-         "implicit": 0,
-         "pageLoad": 300000,
-         "script": 30000
-      },
-      "unhandledPromptBehavior": "dismiss and notify",
-      "webauthn:virtualAuthenticators": true
-   },
-   "sessionId": "1a726673da2da7282ccb5c9d779a9d7b"
-}
-[1589920400.932][INFO]: [1a726673da2da7282ccb5c9d779a9d7b] COMMAND Navigate {
-   "url": "https://the-internet.herokuapp.com/"
-}
-[1589920400.932][INFO]: Waiting for pending navigations...
-[1589920400.933][INFO]: Done waiting for pending navigations. Status: ok
-[1589920401.969][INFO]: Waiting for pending navigations...
-[1589920402.072][SEVERE]: Timed out receiving message from renderer: 0.100
-[1589920402.175][SEVERE]: Timed out receiving message from renderer: 0.100
-[1589920402.276][SEVERE]: Timed out receiving message from renderer: 0.100
-[1589920402.517][INFO]: Done waiting for pending navigations. Status: ok
-[1589920402.517][INFO]: [1a726673da2da7282ccb5c9d779a9d7b] RESPONSE Navigate
-[1589920402.523][INFO]: [1a726673da2da7282ccb5c9d779a9d7b] COMMAND FindElement {
-   "using": "link text",
-   "value": "File Upload"
-}
-[1589920402.523][INFO]: Waiting for pending navigations...
-[1589920402.524][INFO]: Done waiting for pending navigations. Status: ok
-[1589920402.539][INFO]: Waiting for pending navigations...
-[1589920402.540][INFO]: Done waiting for pending navigations. Status: ok
-[1589920402.540][INFO]: [1a726673da2da7282ccb5c9d779a9d7b] RESPONSE FindElement {
-   "element-6066-11e4-a52e-4f735466cecf": "8eac804c-17c1-41f6-9e6a-f146d8c8848c"
-}
-[1589920402.545][INFO]: [1a726673da2da7282ccb5c9d779a9d7b] COMMAND ClickElement {
-   "id": "8eac804c-17c1-41f6-9e6a-f146d8c8848c"
-}
-[1589920402.545][INFO]: Waiting for pending navigations...
-[1589920402.546][INFO]: Done waiting for pending navigations. Status: ok
-[1589920402.628][INFO]: Waiting for pending navigations...
-[1589920402.770][INFO]: Done waiting for pending navigations. Status: ok
-[1589920402.770][INFO]: [1a726673da2da7282ccb5c9d779a9d7b] RESPONSE ClickElement
-[1589920402.775][INFO]: [1a726673da2da7282ccb5c9d779a9d7b] COMMAND FindElement {
-   "using": "css selector",
-   "value": "#file\\-upload"
-}
-[1589920402.775][INFO]: Waiting for pending navigations...
-[1589920402.775][INFO]: Done waiting for pending navigations. Status: ok
-[1589920402.782][INFO]: Waiting for pending navigations...
-[1589920402.783][INFO]: Done waiting for pending navigations. Status: ok
-[1589920402.783][INFO]: [1a726673da2da7282ccb5c9d779a9d7b] RESPONSE FindElement {
-   "element-6066-11e4-a52e-4f735466cecf": "1f2d545b-8cdf-4aef-bc0e-9dda95de7abd"
-}
-[1589920402.789][INFO]: [1a726673da2da7282ccb5c9d779a9d7b] COMMAND TypeElement {
-   "id": "1f2d545b-8cdf-4aef-bc0e-9dda95de7abd",
-   "text": "/Users/syntax/Desktop/myFile.png",
-   "value": [ "/", "U", "s", "e", "r", "s", "/", "s", "y", "n", "t", "a", "x", "/", "D", "e", "s", "k", "t", "..." ]
-}
-[1589920402.789][INFO]: Waiting for pending navigations...
-[1589920402.790][INFO]: Done waiting for pending navigations. Status: ok
-[1589920402.801][INFO]: Waiting for pending navigations...
-[1589920402.802][INFO]: Done waiting for pending navigations. Status: ok
-[1589920402.802][INFO]: [1a726673da2da7282ccb5c9d779a9d7b] RESPONSE TypeElement ERROR invalid argument: File not found : /Users/syntax/Desktop/myFile.png
-  (Session info: chrome=81.0.4044.138)
+[1589994526.742][INFO]: Launching chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --load-extension=/var/folders/7_/sgqr7vcn4619n1jb8b_3bmmc0000gn/T/.com.google.Chrome.95gjP8/internal --log-level=0 --no-first-run --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/var/folders/7_/sgqr7vcn4619n1jb8b_3bmmc0000gn/T/.com.google.Chrome.7cPg0P data:,
+[1589994527.430][INFO]: Failed to connect to Chrome. Attempting to kill it.
+[1589994527.608][INFO]: [138a9280269ed175c58d828c042ebabf] RESPONSE InitSession ERROR session not created: This version of ChromeDriver only supports Chrome version 81

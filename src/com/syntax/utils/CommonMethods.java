@@ -1,8 +1,10 @@
 package com.syntax.utils;
 
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebElement;
@@ -23,7 +25,7 @@ public class CommonMethods extends BaseClass {
 		element.clear();
 		element.sendKeys(text);
 	}
- 
+
 	/**
 	 * Method checks if radio/checkbox is enabled and clicks it
 	 * 
@@ -167,7 +169,7 @@ public class CommonMethods extends BaseClass {
 	}
 
 	public static void switchToFrame(int index) {
-		
+
 		try {
 			driver.switchTo().frame(index);
 		} catch (NoSuchFrameException e) {
@@ -175,25 +177,78 @@ public class CommonMethods extends BaseClass {
 		}
 	}
 	
+	
+	/**
+	 * Method switches focus to child window
+	 */
+	public static void switchToChildWindow() {
+		String mainWindow = driver.getWindowHandle();
+		Set<String> windows = driver.getWindowHandles();
+		for (String window : windows) {
+			if (!window.equals(mainWindow)) {
+				driver.switchTo().window(window);
+				break;
+			}
+		}
+	}
+
+	
+
 	public static WebDriverWait getWaitObject() {
-		WebDriverWait wait=new WebDriverWait(driver, Constants.EXPLICIT_WAIT_TIME);
+		WebDriverWait wait = new WebDriverWait(driver, Constants.EXPLICIT_WAIT_TIME);
 		return wait;
 	}
-	
+
 	public static void waitForClickability(WebElement element) {
 		getWaitObject().until(ExpectedConditions.elementToBeClickable(element));
 	}
-	
+
+	public static WebElement waitForVisibility(WebElement element) {
+		return getWaitObject().until(ExpectedConditions.visibilityOf(element));
+	}
+
 	public static void click(WebElement element) {
 		waitForClickability(element);
 		element.click();
-		
-	
-		
-		
-		
+	}
+
+	public static JavascriptExecutor getJSObject() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		return js;
+	}
+
+	public static void jsClick(WebElement element) {
+		getJSObject().executeScript("arguments[0].click();", element);
+	}
+
+	public static void scrollToElement(WebElement element) {
+		getJSObject().executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	/**
+	 * Method that will scroll the page down based on the passed pixel parameters
+	 * 
+	 * @param pixel
+	 */
+	public static void scrollDown(int pixel) {
+		getJSObject().executeScript("window.scrollBy(0," + pixel + ")");
+	}
+
+	/**
+	 * Method that will scroll the page up based on the passed pixel parameters
+	 * 
+	 * @param pixel
+	 */
+	public static void scrollUp(int pixel) {
+		getJSObject().executeScript("window.scrollBy(0,-" + pixel + ")");
+	}
+
+	public static void wait(int second) {
+		try {
+			Thread.sleep(second * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 	}
 }
-
-
-
