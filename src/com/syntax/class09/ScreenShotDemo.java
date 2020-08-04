@@ -3,7 +3,6 @@ package com.syntax.class09;
 import java.io.File;
 import java.io.IOException;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -28,7 +27,7 @@ public class ScreenShotDemo extends BaseClass {
 		File souceFile=ts.getScreenshotAs(OutputType.FILE);
 		
 		//Copy the file from source to a another destination 
-		try {
+		try { 
 			FileUtils.copyFile(souceFile, new File("screenshots/HRMS/pics.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
